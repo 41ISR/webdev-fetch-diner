@@ -1,8 +1,10 @@
-import { Link } from "react-router-dom"
 
-const BookCard = ({author_name, first_publish_year,title, cover_i}) => {
+import { Link} from "react-router-dom"
+
+const BookCard = ({author_name, first_publish_year,title, cover_i,book_key}) => {
+
     return (
-        <Link className="book-card" to={`/book`}>
+        <Link className="book-card" to={`/book/${book_key.split('/')[2]}`}>
             <div className="book-image">
                 <img
                     src={`https://covers.openlibrary.org/b/id/${cover_i}-L.jpg`}
